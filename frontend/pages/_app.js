@@ -21,6 +21,7 @@ const theme = createTheme({
   direction: 'rtl',
   fontSize: '2rem',
   lightGrey: '#E7EAF3',
+  midGrey:'#B0B4C4',
   purple: '#6358D8',
   lightPurple: '#8B83E2',
   almostBlack: '#52555D',
