@@ -9,7 +9,7 @@ const LecturerExplanation = () => {
     <Container>
       <LecturerExplanationHeader />
       <LecturerExplanationMain />
-      <ButtonFooter />
+      <ButtonFooter text={'אני רוצה להצטרף!'} />
     </Container>
   );
 };
