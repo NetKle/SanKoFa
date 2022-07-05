@@ -2,7 +2,7 @@ import React from 'react';
 import { css, withTheme } from '@emotion/react';
 import { Box, Typography } from '@mui/material';
 
-const ButtonFooter = ({ theme }) => {
+const ButtonFooter = ({ theme, text }) => {
   const styles = {
     Box: css({
       backgroundColor: theme.purple,
@@ -17,7 +17,7 @@ const ButtonFooter = ({ theme }) => {
 
   return (
     <Box css={styles.Box}>
-      <Typography color="white">אני רוצה להצטרף!</Typography>
+      <Typography color="white">{ text }</Typography>
     </Box>
   );
 };
