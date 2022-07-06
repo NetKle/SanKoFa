@@ -7,10 +7,10 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
 const SelectLocation = () => {
-  const [age, setAge] = useState('');
+  const [location, setLocation] = useState('');
 
   const handleChange = (event) => {
-    setAge(event.target.value);
+    setLocation(event.target.value);
   };
   const styles = {
     box: {
@@ -36,7 +36,7 @@ const SelectLocation = () => {
       </Box>
       <Box styles={styles.boxSelect}>
         <FormControl sx={{ width: '100%' }}>
-          <Select value={age} onChange={handleChange} displayEmpty>
+          <Select value={location} onChange={handleChange} displayEmpty>
             <MenuItem value="" disabled>
               <em>רשימת ישובים</em>
             </MenuItem>

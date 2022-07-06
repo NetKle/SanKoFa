@@ -4,6 +4,7 @@ import React from 'react';
 import TextFieldForm from './TextFieldForm';
 import Image from 'next/image';
 import SelectLocation from './SelectLocation';
+import InputField from './InputField';
 const LecturerAbout = ({ theme }) => {
   const styles = {
     box: css({
@@ -26,58 +27,40 @@ const LecturerAbout = ({ theme }) => {
     <Box>
       <Box css={styles.box}>
         <Box css={styles.boxTextField}>
-          <TextFieldForm
-            label={
-              <span css={styles.spanLabel}>
-                שם מלא <span style={{ color: theme.purple }}>*</span>
-              </span>
-            }
-            onChange={() => console.log('Change')}
-            placeholder={'שם מלא'}
-          />
+          <InputField text={'שם מלא'} placeholder={'שם מלא'} required={true} />
         </Box>
       </Box>
       <Box css={styles.box}>
         <Box css={styles.boxTextField}>
-          <TextFieldForm
-            label={
-              <span css={styles.spanLabel}>
-                <span style={{ position: 'absolute' }}>
-                  <Image
-                    src="/telephoneIcon.svg"
-                    width={'24'}
-                    height={'24'}
-                    alt="Telephone icon"
-                  />
-                </span>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; טלפון &nbsp;
-                <span style={{ color: theme.purple }}>*</span>
-              </span>
-            }
-            onChange={() => console.log('Change')}
+          <InputField
+            text={'טלפון'}
             placeholder={'טלפון'}
+            required={true}
+            image={
+              <Image
+                src="/telephoneIcon.svg"
+                width={'18'}
+                height={'18'}
+                alt="Location icon"
+              />
+            }
           />
         </Box>
       </Box>
       <Box css={styles.box}>
         <Box css={styles.boxTextField}>
-          <TextFieldForm
-            label={
-              <span css={styles.spanLabel}>
-                <span style={{ position: 'absolute' }}>
-                  <Image
-                    src="/mailIcon.svg"
-                    width={'24'}
-                    height={'24'}
-                    alt="Mail icon"
-                  />
-                </span>
-                &nbsp; &nbsp; &nbsp; מייל &nbsp;
-                <span style={{ color: theme.purple }}>*</span>
-              </span>
+          <InputField
+            text={'מייל'}
+            placeholder={'טסט'}
+            required={true}
+            image={
+              <Image
+                src="/mailIcon.svg"
+                width={'18'}
+                height={'18'}
+                alt="Location icon"
+              />
             }
-            onChange={() => console.log('Change')}
-            placeholder={'מייל'}
           />
         </Box>
       </Box>
