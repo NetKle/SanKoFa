@@ -23,7 +23,7 @@ const styles = {
 
 const LecturerExplanationHeader = ({ theme }) => {
   return (
-    <>
+    <span style={{ height: '20vh ' }}>
       <Box css={styles.lectureHeader}>
         <Typography css={styles.typographyHeader} color="initial">
           קהילת סאן-קו-פה היא המקום שלך ליצירת שינוי והגברת תחושת המשמעות.
@@ -57,7 +57,7 @@ const LecturerExplanationHeader = ({ theme }) => {
           איך זה עובד?
         </Typography>
       </Box>
-    </>
+    </span>
   );
 };
 

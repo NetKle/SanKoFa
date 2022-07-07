@@ -1,8 +1,9 @@
 import React from 'react';
 import { Box, TextField, Typography } from '@mui/material';
 import { withTheme } from '@emotion/react';
+import InputLabel from '../common/InputLabel';
 
-const testTextField = ({ text, placeholder, theme, required, image }) => {
+const InputField = ({ text, placeholder, theme, required, image }) => {
   const styles = {
     box: {
       display: 'flex',
@@ -17,13 +18,7 @@ const testTextField = ({ text, placeholder, theme, required, image }) => {
 
   return (
     <Box>
-      <Box css={styles.box}>
-        {image && image}
-        &nbsp;
-        <Typography variant="body1">
-          {text} {required && <span style={{ color: theme.purple }}> * </span>}
-        </Typography>
-      </Box>
+      <InputLabel image={image} text={text} required={required} />
       <TextField
         fullWidth
         sx={{
@@ -43,4 +38,4 @@ const testTextField = ({ text, placeholder, theme, required, image }) => {
   );
 };
 
-export default withTheme(testTextField);
+export default withTheme(InputField);

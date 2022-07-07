@@ -5,8 +5,9 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import { withTheme } from '@emotion/react';
 
-const SelectLocation = () => {
+const SelectLocation = ({ theme }) => {
   const [location, setLocation] = useState('');
 
   const handleChange = (event) => {
@@ -35,8 +36,18 @@ const SelectLocation = () => {
         <Typography variant="body1">מקום מגורים</Typography>
       </Box>
       <Box styles={styles.boxSelect}>
-        <FormControl sx={{ width: '100%' }}>
-          <Select value={location} onChange={handleChange} displayEmpty>
+        <FormControl sx={{ width: '100%', marginTop: '6px' }}>
+          <Select
+            sx={{
+              '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                borderColor: theme.purple,
+              },
+            }}
+            size={'small'}
+            value={location}
+            onChange={handleChange}
+            displayEmpty
+          >
             <MenuItem value="" disabled>
               <em>רשימת ישובים</em>
             </MenuItem>
@@ -50,4 +61,4 @@ const SelectLocation = () => {
   );
 };
 
-export default SelectLocation;
+export default withTheme(SelectLocation);

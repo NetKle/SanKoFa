@@ -1,6 +1,5 @@
 import { Box } from '@mui/material';
 import React from 'react';
-import LecturerAbout from '../components/lecturerSignup/LecturerAbout.jsx';
 import MainButtonNavigation from '../components/lecturerSignup/MainButtonsNavigation.jsx';
 
 const lecturerSignup = () => {

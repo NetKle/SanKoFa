@@ -11,13 +11,16 @@ const ButtonFooter = ({ theme, text }) => {
       textAlign: 'center',
       width: '90%',
       margin: '0 auto',
-      marginTop: '41px',
+      cursor: 'pointer',
+      // marginTop: '41px',
+      // position: 'fixed',
+      // bottom: '0',
     }),
   };
 
   return (
     <Box css={styles.Box}>
-      <Typography color="white">{ text }</Typography>
+      <Typography color="white">{text}</Typography>
     </Box>
   );
 };
