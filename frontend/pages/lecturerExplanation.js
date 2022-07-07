@@ -6,10 +6,10 @@ import { Box, Container } from '@mui/material';
 
 const LecturerExplanation = () => {
   return (
-    <Container sx={{ height: '90vh' }}>
+    <Container>
       <LecturerExplanationHeader />
       <LecturerExplanationMain />
-      <Box style={{ marginTop: '10px' }}>
+      <Box sx={{ marginTop: '10px' }}>
         <ButtonFooter text={'אני רוצה להצטרף!'} />
       </Box>
     </Container>

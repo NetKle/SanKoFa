@@ -51,12 +51,18 @@ const LecturerAbout = ({ theme }) => {
     <Box sx={{ height: '85vh' }}>
       <Box css={styles.box}>
         <Box css={styles.boxTextField}>
-          <InputField text={'שם מלא'} placeholder={'שם מלא'} required={true} />
+          <InputField
+            fieldName={'fullName'}
+            text={'שם מלא'}
+            placeholder={'שם מלא'}
+            required={true}
+          />
         </Box>
       </Box>
       <Box css={styles.box}>
         <Box css={styles.boxTextField}>
           <InputField
+            fieldName={'phoneNumber'}
             text={'טלפון'}
             placeholder={'טלפון'}
             required={true}
@@ -74,6 +80,7 @@ const LecturerAbout = ({ theme }) => {
       <Box css={styles.box}>
         <Box css={styles.boxTextField}>
           <InputField
+            fieldName={'mail'}
             text={'מייל'}
             placeholder={'טסט'}
             required={true}
@@ -151,7 +158,12 @@ const LecturerAbout = ({ theme }) => {
         </Box>
       </Box>
       <Box sx={{ height: '15vh' }}>
-        <InputField placeholder={''} text={'איך הגעת אלינו?'} />
+        {/* Check the name in DB */}
+        <InputField
+          fieldName={'how'}
+          placeholder={''}
+          text={'איך הגעת אלינו?'}
+        />
       </Box>
       <Box css={styles.buttonFooter}>
         <ButtonFooter text={'המשך'} />

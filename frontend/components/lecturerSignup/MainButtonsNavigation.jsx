@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { css, withTheme } from '@emotion/react';
-import { Tab, Tabs, Typography, Box, Grid, TextField } from '@mui/material';
+import { Tab, Tabs, Box } from '@mui/material';
 import LecturerAbout from './LecturerAbout';
+import { FormProvider, useForm } from 'react-hook-form';
 const styles = {
   tab: css({
     fontSize: '1rem',
@@ -11,6 +12,9 @@ const styles = {
 
 const MainButtonNavigation = ({ theme }) => {
   const [value, setValue] = useState(0);
+  // React hook form
+  const methods = useForm();
+  const onSubmit = (data) => console.log(data);
 
   const viewPage = () => {
     if (value === 0) {
@@ -70,7 +74,13 @@ const MainButtonNavigation = ({ theme }) => {
           />
         </Tabs>
       </Box>
-      {viewPage()}
+      <FormProvider {...methods}>
+        <form onSubmit={methods.handleSubmit(onSubmit)}>
+          {viewPage()}
+          {/* Only for tests */}
+          <button type="submit">submit</button>
+        </form>
+      </FormProvider>
     </Box>
   );
 };

@@ -2,8 +2,18 @@ import React from 'react';
 import { Box, TextField, Typography } from '@mui/material';
 import { withTheme } from '@emotion/react';
 import InputLabel from '../common/InputLabel';
+import { useFormContext } from 'react-hook-form';
 
-const InputField = ({ text, placeholder, theme, required, image }) => {
+const InputField = ({
+  text,
+  placeholder,
+  theme,
+  required,
+  image,
+  fieldName,
+}) => {
+  const { register } = useFormContext(); // retrieve all hook methods
+
   const styles = {
     box: {
       display: 'flex',
@@ -20,6 +30,8 @@ const InputField = ({ text, placeholder, theme, required, image }) => {
     <Box>
       <InputLabel image={image} text={text} required={required} />
       <TextField
+        name={fieldName}
+        {...register(`${fieldName}`)}
         fullWidth
         sx={{
           '& .MuiInput-underline:after': {

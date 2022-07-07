@@ -12,9 +12,7 @@ const ButtonFooter = ({ theme, text }) => {
       width: '90%',
       margin: '0 auto',
       cursor: 'pointer',
-      // marginTop: '41px',
-      // position: 'fixed',
-      // bottom: '0',
+      marginBottom: '10px',
     }),
   };
 
