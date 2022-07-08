@@ -6,25 +6,29 @@ import { FaAngleRight } from "react-icons/fa";
 import { css } from "@emotion/react";
 import { withTheme } from '@emotion/react'
 
-const styles = {
-	header: css({
-		paddingTop: 10
-	}),
-	backBtn: css({
-		fontWeight: 400
-	}),
-	helpBtn: {
-		height: 30,
-		width: 30,
-		borderRadius: '50%',
-		display: 'flex',
-		alignItems: 'center',
-		justifyContent: 'center',
-		fontSize: '1.3rem'
-	}
-}
-
 const Header = ({ theme }) => {
+  const styles = {
+    header: css({
+      paddingTop: 10,
+      fontSize: theme.fontSize
+    }),
+    backBtn: css({
+      fontWeight: 400,
+      color: theme.almostBlack
+    }),
+    helpBtn: {
+      height: 30,
+      width: 30,
+      borderRadius: '50%',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      fontSize: '1.3rem',
+      backgroundColor: theme.lightGrey,
+      color: theme.purple
+    }
+  }
+
   return (
     <div>
       <Box
@@ -34,15 +38,14 @@ const Header = ({ theme }) => {
           display: "flex",
           alignItems: "center",
         }}
-		css={[styles.header, {fontSize: theme.fontSize}]}
-      >
+        css={styles.header}>
         <Box>
-          <Button css={[styles.backBtn, { color: theme.almostBlack }]}>
+          <Button css={styles.backBtn}>
             <FaAngleRight /> חזרה
           </Button>
         </Box>
 
-        <Box css={[styles.helpBtn, { backgroundColor: theme.lightGrey, color: theme.purple }]}>
+        <Box css={styles.helpBtn}>
           <AiOutlineQuestion color={theme.almostBlack}/>
         </Box>
       </Box>
