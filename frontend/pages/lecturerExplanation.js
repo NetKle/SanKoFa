@@ -10,7 +10,10 @@ const LecturerExplanation = () => {
       <LecturerExplanationHeader />
       <LecturerExplanationMain />
       <Box sx={{ marginTop: '10px' }}>
-        <ButtonFooter text={'אני רוצה להצטרף!'} href="/lecturerBeforeSignup" />
+        <ButtonFooter
+          text={'אני רוצה להצטרף!'}
+          href={'/lecturerBeforeSignup'}
+        />
       </Box>
     </Container>
   );

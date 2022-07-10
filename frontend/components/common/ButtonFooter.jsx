@@ -16,18 +16,23 @@ const ButtonFooter = ({ theme, text, href, toNextPage, numberPage }) => {
       marginBottom: '10px',
     }),
   };
-  href && (
-    <Link href={href}>
-      <Box css={styles.Box}>
+
+  if (href) {
+    return (
+      <Link href={href}>
+        <Box css={styles.Box}>
+          <Typography color="white">{text}</Typography>
+        </Box>
+      </Link>
+    );
+  } else if (toNextPage) {
+    return (
+      <Box css={styles.Box} onClick={() => toNextPage(null, numberPage)}>
         <Typography color="white">{text}</Typography>
       </Box>
-    </Link>
-  );
-  return (
-    <Box css={styles.Box} onClick={() => toNextPage(null, numberPage)}>
-      <Typography color="white">{text}</Typography>
-    </Box>
-  );
+    );
+  }
+  return <></>;
 };
 
 export default withTheme(ButtonFooter);
