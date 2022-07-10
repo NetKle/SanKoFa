@@ -166,7 +166,7 @@ const LecturerAbout = ({ theme }) => {
         />
       </Box>
       <Box css={styles.buttonFooter}>
-        <ButtonFooter text={'המשך'} />
+        <ButtonFooter text={'המשך'} href="/" />
       </Box>
     </Box>
   );

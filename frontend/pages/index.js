@@ -1,53 +1,51 @@
-import React, { useState } from "react";
-import Image from "next/image";
-import { Box, Button } from "@mui/material";
-import { css } from "@emotion/react";
-import Typography from "@mui/material/Typography";
-import { withTheme } from "@emotion/react";
-import { Divider } from "@mui/material";
-import { FaAngleLeft } from "react-icons/fa";
-import Link from "next/link";
+import React, { useState } from 'react';
+import Image from 'next/image';
+import { Box, Button } from '@mui/material';
+import { css } from '@emotion/react';
+import Typography from '@mui/material/Typography';
+import { withTheme } from '@emotion/react';
+import { Divider } from '@mui/material';
+import { FaAngleLeft } from 'react-icons/fa';
+import Link from 'next/link';
 
 const Home = ({ theme }) => {
   const styles = {
-    container: { width: 120,
-      margin: "auto",
-      marginTop: 30
-    },
+    container: { width: 120, margin: 'auto', marginTop: 30 },
     mainTitle: css({
       fontSize: 30,
-      textAlign: "center",
+      textAlign: 'center',
       fontWeight: 900,
       marginTop: 10,
-      color: theme.purple
+      color: theme.purple,
     }),
     mainText: css({
-      textAlign: "center",
+      textAlign: 'center',
       marginTop: 16,
       fontWeight: 300,
-      color: theme.almostBlack
+      color: theme.almostBlack,
     }),
     questionTitle: css({
-      color: "#000",
+      color: '#000',
       marginTop: 24,
       fontSize: 18,
       fontWeight: 500,
       marginBottom: 20,
-      textAlign: "center",
+      textAlign: 'center',
     }),
     boxLinksWrap: css({
-      display: "flex",
-      flexDirection: "row",
-      justifyContent: "space-around",
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-around',
     }),
     signupLinkBox: css({
-      width: "40%",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
+      width: '40%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
       borderRadius: 8,
       padding: 20,
-      border: `2px solid ${theme.lightPurple}`
+      border: `2px solid ${theme.lightPurple}`,
+      cursor: 'pointer',
     }),
     signUpLinkBoxIcon: css({
       width: 100,
@@ -62,13 +60,13 @@ const Home = ({ theme }) => {
     divider: css({
       marginTop: 40,
       marginBottom: 40,
-      backgroundColor: theme.lightGrey
+      backgroundColor: theme.lightGrey,
     }),
     loginLink: css({
-      display: "flex",
-      alignItems: "center",
-      margin: "auto",
-      color: "#000",
+      display: 'flex',
+      alignItems: 'center',
+      margin: 'auto',
+      color: '#000',
     }),
     loginLinkIcon: css({
       marginLeft: 10,
@@ -89,9 +87,7 @@ const Home = ({ theme }) => {
       </Box>
 
       <Box>
-        <Typography css={styles.mainTitle}>
-          סאן-קו-פה
-        </Typography>
+        <Typography css={styles.mainTitle}>סאן-קו-פה</Typography>
 
         <Typography css={styles.mainText}>
           קהילת סאן-קו-פה נוצרה מתוך ההיכרות עם האתגרים היחודיים של אוכלוסיות
@@ -102,38 +98,35 @@ const Home = ({ theme }) => {
         <Typography css={styles.questionTitle}>רוצה לקחת חלק?</Typography>
 
         <Box css={styles.boxLinksWrap}>
-          <Box
-            css={styles.signupLinkBox}
-          >
-            <Image
-              src="/signup-icon-1.png"
-              alt="Logo"
-              width={65}
-              height={65}
-              objectFit="contain"
-            />
+          <Link href="/organizationExplanation">
+            <Box css={styles.signupLinkBox}>
+              <Image
+                src="/signup-icon-1.png"
+                alt="Logo"
+                width={65}
+                height={65}
+                objectFit="contain"
+              />
 
-            <Typography css={styles.signUpLinkBoxTitle}>עמותה</Typography>
-          </Box>
+              <Typography css={styles.signUpLinkBoxTitle}>עמותה</Typography>
+            </Box>
+          </Link>
+          <Link href="/lecturerExplanation">
+            <Box css={styles.signupLinkBox}>
+              <Image
+                src="/signup-icon-2.png"
+                alt="Logo"
+                width={65}
+                height={65}
+                objectFit="contain"
+              />
 
-          <Box
-            css={styles.signupLinkBox}
-          >
-            <Image
-              src="/signup-icon-2.png"
-              alt="Logo"
-              width={65}
-              height={65}
-              objectFit="contain"
-            />
-
-            <Typography css={styles.signUpLinkBoxTitle}>מרצה</Typography>
-          </Box>
+              <Typography css={styles.signUpLinkBoxTitle}>מרצה</Typography>
+            </Box>
+          </Link>
         </Box>
 
-        <Divider
-          css={styles.divider}
-        ></Divider>
+        <Divider css={styles.divider}></Divider>
 
         <Link href="/login">
           <Button css={styles.loginLink}>

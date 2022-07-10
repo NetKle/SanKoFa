@@ -1,8 +1,9 @@
 import React from 'react';
 import { css, withTheme } from '@emotion/react';
 import { Box, Typography } from '@mui/material';
+import Link from 'next/link';
 
-const ButtonFooter = ({ theme, text }) => {
+const ButtonFooter = ({ theme, text, href }) => {
   const styles = {
     Box: css({
       backgroundColor: theme.purple,
@@ -17,9 +18,11 @@ const ButtonFooter = ({ theme, text }) => {
   };
 
   return (
-    <Box css={styles.Box}>
-      <Typography color="white">{text}</Typography>
-    </Box>
+    <Link href={href}>
+      <Box css={styles.Box}>
+        <Typography color="white">{text}</Typography>
+      </Box>
+    </Link>
   );
 };
 

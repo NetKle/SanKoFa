@@ -1,8 +1,8 @@
-import React from "react";
-import Image from "next/image";
-import { css } from "@emotion/react";
-import { Container, Typography } from "@mui/material";
-import ButtonFooter from "../components/common/ButtonFooter";
+import React from 'react';
+import Image from 'next/image';
+import { css } from '@emotion/react';
+import { Container, Typography } from '@mui/material';
+import ButtonFooter from '../components/common/ButtonFooter';
 
 const LecturerBeforeSignup = () => {
   const styles = {
@@ -11,25 +11,25 @@ const LecturerBeforeSignup = () => {
     }),
     mainTitle: css({
       maxWidth: 300,
-      margin: "auto",
+      margin: 'auto',
       fontWeight: 500,
-      textAlign: "center",
+      textAlign: 'center',
       fontSize: 18,
     }),
     subText: css({
       paddingTop: 5,
       fontSize: 16,
       fontWeight: 300,
-      textAlign: "center",
+      textAlign: 'center',
       maxWidth: 400,
-      margin: "auto",
-      color: "#777C86",
+      margin: 'auto',
+      color: '#777C86',
     }),
     startText: css({
       fontWeight: 600,
       fontSize: 22,
       paddingTop: 15,
-      textAlign: "center",
+      textAlign: 'center',
     }),
   };
 
@@ -56,7 +56,7 @@ const LecturerBeforeSignup = () => {
 
       <Typography css={styles.startText}>שנתחיל?</Typography>
 
-      <ButtonFooter text="קדימה" />
+      <ButtonFooter text="קדימה" href="/lecturerSignup" />
     </Container>
   );
 };
