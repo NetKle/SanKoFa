@@ -3,6 +3,7 @@ import { css, withTheme } from '@emotion/react';
 import { Tab, Tabs, Box } from '@mui/material';
 import LecturerAbout from './LecturerAbout';
 import { FormProvider, useForm } from 'react-hook-form';
+import AboutLecture from './AboutLecture';
 const styles = {
   tab: css({
     fontSize: '1rem',
@@ -18,9 +19,9 @@ const MainButtonNavigation = ({ theme }) => {
 
   const viewPage = () => {
     if (value === 0) {
-      return <LecturerAbout />;
+      return <LecturerAbout toNextPage={handleChange} />;
     } else if (value === 1) {
-      return <>1</>;
+      return <AboutLecture toNextPage={handleChange} />;
     } else if (value === 2) {
       return <>2</>;
     }
@@ -79,6 +80,7 @@ const MainButtonNavigation = ({ theme }) => {
           {viewPage()}
           {/* Only for tests */}
           <button type="submit">submit</button>
+          {/* End test */}
         </form>
       </FormProvider>
     </Box>

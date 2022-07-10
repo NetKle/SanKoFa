@@ -3,7 +3,7 @@ import { css, withTheme } from '@emotion/react';
 import { Box, Typography } from '@mui/material';
 import Link from 'next/link';
 
-const ButtonFooter = ({ theme, text, href }) => {
+const ButtonFooter = ({ theme, text, href, toNextPage, numberPage }) => {
   const styles = {
     Box: css({
       backgroundColor: theme.purple,
@@ -16,13 +16,17 @@ const ButtonFooter = ({ theme, text, href }) => {
       marginBottom: '10px',
     }),
   };
-
-  return (
+  href && (
     <Link href={href}>
       <Box css={styles.Box}>
         <Typography color="white">{text}</Typography>
       </Box>
     </Link>
+  );
+  return (
+    <Box css={styles.Box} onClick={() => toNextPage(null, numberPage)}>
+      <Typography color="white">{text}</Typography>
+    </Box>
   );
 };
 

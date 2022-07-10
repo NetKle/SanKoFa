@@ -6,7 +6,7 @@ import SelectLocation from './SelectLocation';
 import InputField from './InputField';
 import InputLabel from '../common/InputLabel';
 import ButtonFooter from '../common/ButtonFooter';
-const LecturerAbout = ({ theme }) => {
+const LecturerAbout = ({ theme, toNextPage }) => {
   const styles = {
     box: css({
       display: 'flex',
@@ -69,8 +69,8 @@ const LecturerAbout = ({ theme }) => {
             image={
               <Image
                 src="/telephoneIcon.svg"
-                width={'18'}
-                height={'18'}
+                width={'20'}
+                height={'20'}
                 alt="Location icon"
               />
             }
@@ -87,8 +87,8 @@ const LecturerAbout = ({ theme }) => {
             image={
               <Image
                 src="/mailIcon.svg"
-                width={'18'}
-                height={'18'}
+                width={'20'}
+                height={'20'}
                 alt="Location icon"
               />
             }
@@ -119,8 +119,8 @@ const LecturerAbout = ({ theme }) => {
             endIcon={
               <Image
                 src="/uploadIcon.svg"
-                width={'18'}
-                height={'18'}
+                width={'24'}
+                height={'24'}
                 alt="Location icon"
               />
             }
@@ -134,10 +134,10 @@ const LecturerAbout = ({ theme }) => {
             text={'סרטון'}
             image={
               <Image
-                src="/imageIcon.svg"
+                src="/videoCameraIcon.svg"
                 width={'24'}
                 height={'24'}
-                alt="Image icon"
+                alt="videoCameraIcon icon"
               />
             }
           />
@@ -147,8 +147,8 @@ const LecturerAbout = ({ theme }) => {
             endIcon={
               <Image
                 src="/uploadIcon.svg"
-                width={'18'}
-                height={'18'}
+                width={'24'}
+                height={'24'}
                 alt="Location icon"
               />
             }
@@ -157,7 +157,7 @@ const LecturerAbout = ({ theme }) => {
           </Button>
         </Box>
       </Box>
-      <Box sx={{ height: '15vh' }}>
+      <Box sx={{ height: '15vh', marginTop: '3vh' }}>
         {/* Check the name in DB */}
         <InputField
           fieldName={'how'}
@@ -166,7 +166,7 @@ const LecturerAbout = ({ theme }) => {
         />
       </Box>
       <Box css={styles.buttonFooter}>
-        <ButtonFooter text={'המשך'} href="/" />
+        <ButtonFooter text={'המשך'} toNextPage={toNextPage} numberPage={1} />
       </Box>
     </Box>
   );
