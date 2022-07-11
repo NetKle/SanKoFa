@@ -2,16 +2,17 @@ import { Box, Typography } from '@mui/material';
 import React from 'react';
 import ToAttention from '../common/ToAttention';
 import Divider from '../common/Divider';
-import InputField from './InputField';
+import InputField from '../common/InputField';
 import Image from 'next/image';
 import SelectWithTypography from './SelectWithTypography';
 import ButtonFooter from '../common/ButtonFooter';
+import AboutLecturePart2 from './AboutLecturePart2';
 
 const AboutLecture = ({ toNextPage }) => {
   const styles = {
     boxTextField: {
       marginTop: '20px',
-      height: '12vh',
+      height: '11vh',
     },
     toAttention: {
       marginTop: '20px',
@@ -90,6 +91,7 @@ const AboutLecture = ({ toNextPage }) => {
           url="https://62cae2111eaf3786ebb29598.mockapi.io/api/natureOfTheMeeting"
         />
       </Box>
+      <AboutLecturePart2 styles={styles} />
       <Box css={styles.buttonFooter}>
         <ButtonFooter text={'המשך'} toNextPage={toNextPage} numberPage={2} />
       </Box>

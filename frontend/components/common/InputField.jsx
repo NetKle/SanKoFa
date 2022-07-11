@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, TextField, Typography } from '@mui/material';
 import { withTheme } from '@emotion/react';
-import InputLabel from '../common/InputLabel';
+import InputLabel from './InputLabel';
 import { useFormContext } from 'react-hook-form';
 
 const InputField = ({
@@ -41,8 +41,6 @@ const InputField = ({
         InputProps={{
           style: styles.inputProps,
         }}
-        // value={'מייל'}
-        // onChange={onChange}
         variant="standard"
         placeholder={placeholder}
       />

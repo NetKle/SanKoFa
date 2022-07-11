@@ -14,6 +14,7 @@ const ButtonFooter = ({ theme, text, href, toNextPage, numberPage }) => {
       margin: '0 auto',
       cursor: 'pointer',
       marginBottom: '10px',
+      // marginTop: '10px',
     }),
   };
 
