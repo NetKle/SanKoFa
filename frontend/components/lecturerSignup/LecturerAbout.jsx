@@ -3,7 +3,7 @@ import { Box, Button, css, TextField } from '@mui/material';
 import React from 'react';
 import Image from 'next/image';
 import SelectLocation from './SelectLocation';
-import InputField from './InputField';
+import InputField from '../common/InputField';
 import InputLabel from '../common/InputLabel';
 import ButtonFooter from '../common/ButtonFooter';
 const LecturerAbout = ({ theme, toNextPage }) => {
